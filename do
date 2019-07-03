@@ -21,10 +21,19 @@ task_usage() {
 
 task_build() {
   ensure_venv
+
+  ./venv/bin/weasyprint invoice.html invoice.pdf
 }
 
 task_watch() {
   ensure_venv
+
+  task_build
+
+  while inotifywait ./*.html ./*.css;
+  do
+    task_build
+  done
 }
 
 cmd="${1:-}"
