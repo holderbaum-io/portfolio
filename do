@@ -4,7 +4,7 @@ set -eu
 
 ensure_venv() {
   if [ ! -d venv ]; then
-    virtualenv -p "$(which python3)" venv
+    virtualenv -p "$(command -v python3)" venv
     ./venv/bin/pip install weasyprint
   fi
 
