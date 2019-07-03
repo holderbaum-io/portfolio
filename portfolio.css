@@ -34,7 +34,7 @@
 
 @page {
   size: A4;
-  margin: 3cm;
+  margin: 2cm 3cm;
   @bottom-left {
     color: #666;
     font-family: 'Open Sans', sans-serif;
@@ -61,6 +61,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 20pt;
+  margin-top: 0;
 }
 
 h2 {
@@ -86,4 +87,20 @@ section {
 
 p {
   text-align: justify;
+}
+
+columns {
+  display: flex;
+}
+
+columns article {
+  flex: 1;
+}
+
+columns article p {
+  text-align: left;
+}
+
+columns article + article {
+  margin-left: 2rem;
 }
