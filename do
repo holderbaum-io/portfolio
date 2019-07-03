@@ -22,7 +22,7 @@ task_usage() {
 task_build() {
   ensure_venv
 
-  ./venv/bin/weasyprint invoice.html invoice.pdf
+  ./venv/bin/weasyprint portfolio.html portfolio.pdf
 }
 
 task_watch() {
